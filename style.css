@@ -22,8 +22,27 @@ body {
 
 .titulek {
     font-family: 'Raleway', serif;
+    font-size: 44px;
 }
 
+.hlavicka {
+    background-image: url(images/island-hlavicka.jpg);   
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-shadow: 1px 1px 2px grey;
+    text-align: center;
+    padding: 25px 30px;
+}
+
+.autor {
+    color: lightgray;
+    text-shadow: 1px 1px 2px #000000;
+    font-weight: normal;
+    font-style: italic;
+}
 
 /* MENU */
 
