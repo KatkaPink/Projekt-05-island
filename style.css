@@ -45,8 +45,25 @@ body {
 }
 
 /* MENU */
+.menu {
+    font-family: 'Raleway', serif;
+    margin: 0;
+    padding: 35px 15px;
+    text-align: center;
+    text-transform: uppercase;
+}
 
+.menu li {
+    display: block;
+    border-bottom: 1px solid lightgray;
+}
 
+.menu a {
+    display: block;
+    color: lightgray;
+    text-decoration:none;
+    padding: 5px 10px;
+}
 
 
 /* OBSAH */
