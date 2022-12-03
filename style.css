@@ -26,13 +26,13 @@ body {
 }
 
 .hlavicka {
-    background-image: url(images/island-hlavicka.jpg);   
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/island-hlavicka.jpg);   
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
     color: white;
-    text-shadow: 1px 1px 2px grey;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
     text-align: center;
     padding: 25px 30px;
 }
@@ -60,20 +60,59 @@ body {
 
 .menu a {
     display: block;
-    color: lightgray;
+    color: grey;
     text-decoration:none;
     padding: 5px 10px;
 }
 
 
 /* OBSAH */
+img {
+    max-width: 100%;   
+    }
+    
+h2 {
+    font-family: 'Raleway', serif;
+    padding: 5px 15px;
+}
 
+p {
+    padding: 2px 15px;
+}
 
-
+strong {
+    font-weight: bolder;
+}
 
 /* FOTOGALERIE */
+.galerie img {
+    width: 100%;
+}
 
+.popisek {
+    font-family: 'Raleway', serif;
+    color: grey;
+    text-align: center;
+    margin: 5px 5px 25px 5px;
+    font-size: 16px;
+    line-height: 1.0;
+    /* font-weight: bold; když to použiji, tak se mi ztuční i popisky mimo fotogalerii*/
+}
 
+.popisek-copy {
+    font-weight: 300;
+    font-size: 14px;
+}
 
+a {
+    color: gray
+}
 
 /* PATICKA */
+
+.paticka {
+    background-color: lightgrey;
+    color: grey;
+    font-size: 14px;
+    padding: 15px;
+}
