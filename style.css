@@ -82,7 +82,7 @@ p {
 }
 
 strong {
-    font: bold; /* font-weight: bold... nic to nedělá */
+    font-weight: 700; /* ..font: bold.. nic to nedělá */
     color: black;
 }
 
@@ -91,7 +91,7 @@ strong {
     width: 100%;
 }
 
- .popisek {
+.popisek {
     font-family: 'Raleway', serif;
     color: grey;
     text-align: center;
@@ -139,6 +139,13 @@ a {
         /* dokončit roztažení menu---------*/
     }
 
+    .popisek {
+        color: white;
+        background-color: grey;
+         /* pridat jeste posunutí na fotku vpravo, ale right: 5px; rozhází všechny popisky */
+        position: absolute;
+     }
+
     .galerie {
         display: flex;
         flex-wrap: wrap;
@@ -164,13 +171,6 @@ a {
        position: relative;
     }
 
-    .popisek {
-       color: white;
-       background-color: red;
-       position: right;
-        /* pridat jeste posunutí na fotku vpravo*/
-    }
-
     .galerie a {
         color: white
     }
@@ -188,17 +188,36 @@ a {
 @media screen and (min-width: 1000px) { 
 
     .galerie .foto {
-        width: 33.333%;
+        width: 33.333%;   
      }
 
      .galerie .popisek {
         width: 33.333%;
+         /* vykukuje na kraji popisek z obsahu ven */
      }
 
      .obsah {
         width: 960px;
+        background-color: white;
         border: #000000;
-        box-shadow: 2px 4px 10px red;
+        box-shadow: 2px 4px 10px grey;
              /* pridat na střed*/
+        
+        padding: 40px;
+        
+     }
+
+     .menuauvod {
+        display: flex;
+     }
+
+     .menu {
+        flex-direction: column;
+        width: fit-content;
+        text-align: left;  
+     }
+
+     .menu li {
+        flex-basis: auto;
      }
 }
