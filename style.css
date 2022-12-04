@@ -68,7 +68,8 @@ body {
 
 /* OBSAH */
 img {
-    max-width: 100%;   
+    max-width: 100%;
+    display: block;   
     }
     
 h2 {
@@ -81,7 +82,8 @@ p {
 }
 
 strong {
-    font-weight: bolder;
+    font: bold; /* font-weight: bold... nic to nedělá */
+    color: black;
 }
 
 /* FOTOGALERIE */
@@ -89,14 +91,16 @@ strong {
     width: 100%;
 }
 
-.popisek {
+ .popisek {
     font-family: 'Raleway', serif;
     color: grey;
     text-align: center;
-    margin: 5px 5px 25px 5px;
     font-size: 16px;
     line-height: 1.0;
-    /* font-weight: bold; když to použiji, tak se mi ztuční i popisky mimo fotogalerii*/
+ }
+
+.galerie .popisek {
+    font-weight: bold; /* přidala jsem do html galerie, aby se mi ztučnily jen popisky ve fotogalerii*/
 }
 
 .popisek-copy {
@@ -115,4 +119,86 @@ a {
     color: grey;
     font-size: 14px;
     padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.40) 0px 20px 36px -28px inset;
+}
+
+/* -----------------media queries---------------------*/
+/* pro TABLET */
+
+@media screen and (min-width: 500px) {
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;  
+    }
+
+    .menu li {
+        border: 1px solid lightgray;
+        padding: 5px 10px;
+        flex: 1 1 25%;
+        /* dokončit roztažení menu---------*/
+    }
+
+    .galerie {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .galerie .foto {
+       width: 50%;
+    }
+
+    .galerie .popisek {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        width: 50%;
+        margin: 0;
+        position: absolute;
+        overflow: hidden;
+        visibility: hidden;
+    }
+
+    .foto img {
+       transition: 0.4s; 
+       display: block;
+       position: relative;
+    }
+
+    .popisek {
+       color: white;
+       background-color: red;
+       position: right;
+        /* pridat jeste posunutí na fotku vpravo*/
+    }
+
+    .galerie a {
+        color: white
+    }
+    
+    .foto:hover .popisek {
+        transform: translateY(-100%);
+        visibility: visible;
+    }
+
+}
+
+
+
+/* pro PC */
+@media screen and (min-width: 1000px) { 
+
+    .galerie .foto {
+        width: 33.333%;
+     }
+
+     .galerie .popisek {
+        width: 33.333%;
+     }
+
+     .obsah {
+        width: 960px;
+        border: #000000;
+        box-shadow: 2px 4px 10px red;
+             /* pridat na střed*/
+     }
 }
